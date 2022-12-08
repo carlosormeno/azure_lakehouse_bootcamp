@@ -1,0 +1,17 @@
+{
+	"name": "FileServer_LinkedService01",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "\\\\OmenBlack\\C$\\data",
+			"userId": "MicrosoftAccount\\carlos.ormeno@outlook.es",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI4ZDcwNWY2My01NDc3LTQyZGEtOWY5MS0yMGQxYTVhNzBhMWUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IRLocalCAOS002",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
