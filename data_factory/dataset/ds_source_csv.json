@@ -5,13 +5,27 @@
 			"referenceName": "FileServer_LinkedService01",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"application": {
+				"type": "string"
+			},
+			"filename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "FileServerLocation",
-				"fileName": "@concat(dataset().filename,'.csv')",
-				"folderPath": "@dataset().application"
+				"fileName": {
+					"value": "@concat(dataset().filename,'.csv')",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().application",
+					"type": "Expression"
+				}
 			},
 			"columnDelimiter": "|",
 			"escapeChar": "\\",
