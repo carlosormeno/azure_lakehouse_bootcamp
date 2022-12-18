@@ -2,7 +2,7 @@
 	"name": "ds_metadata_json",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ADLS_LinkedService",
+			"referenceName": "ADLS_LinkendService",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {

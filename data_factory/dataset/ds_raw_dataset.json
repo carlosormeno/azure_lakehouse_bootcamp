@@ -2,7 +2,7 @@
 	"name": "ds_raw_dataset",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "FileServer_LinkedService",
+			"referenceName": "FileServer_LinkedService01",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
