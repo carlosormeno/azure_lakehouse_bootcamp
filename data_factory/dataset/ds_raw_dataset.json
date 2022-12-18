@@ -1,12 +1,12 @@
 {
-	"name": "ds_source_csv",
+	"name": "ds_raw_dataset",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "FileServer_LinkedService",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"application": {
+			"aplicacion": {
 				"type": "string"
 			},
 			"filename": {
@@ -18,20 +18,16 @@
 		"typeProperties": {
 			"location": {
 				"type": "FileServerLocation",
-				"fileName": {
-					"value": "@dataset().filename",
-					"type": "Expression"
-				},
-				"folderPath": {
-					"value": "@dataset().application",
-					"type": "Expression"
-				}
+				"folderPath": "sharedknow/posts"
 			},
-			"columnDelimiter": "|",
+			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
 	}
 }

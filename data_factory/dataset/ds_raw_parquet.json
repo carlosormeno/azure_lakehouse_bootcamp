@@ -2,7 +2,7 @@
 	"name": "ds_raw_parquet",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ADLS_LinkendService",
+			"referenceName": "ADLS_LinkedService",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -19,7 +19,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@concat(dataset().filename,'.csv')",
+					"value": "@dataset().filename",
 					"type": "Expression"
 				},
 				"folderPath": {
@@ -30,6 +30,15 @@
 			},
 			"compressionCodec": "snappy"
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "Id",
+				"type": "UTF8"
+			},
+			{
+				"name": "Type",
+				"type": "UTF8"
+			}
+		]
 	}
 }

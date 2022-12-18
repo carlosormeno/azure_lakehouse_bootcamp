@@ -1,8 +1,8 @@
 {
-	"name": "ds_source_csv",
+	"name": "ds_raw_json",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "FileServer_LinkedService",
+			"referenceName": "ADLS_LinkedService",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -14,10 +14,10 @@
 			}
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "FileServerLocation",
+				"type": "AzureBlobFSLocation",
 				"fileName": {
 					"value": "@dataset().filename",
 					"type": "Expression"
@@ -25,13 +25,10 @@
 				"folderPath": {
 					"value": "@dataset().application",
 					"type": "Expression"
-				}
-			},
-			"columnDelimiter": "|",
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
+				},
+				"fileSystem": "raw"
+			}
 		},
-		"schema": []
+		"schema": {}
 	}
 }
